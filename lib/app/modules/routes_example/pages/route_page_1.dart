@@ -10,6 +10,7 @@ class RoutePage1 extends StatefulWidget {
 }
 
 class _RoutePage1State extends State<RoutePage1> {
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +22,9 @@ class _RoutePage1State extends State<RoutePage1> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           InkWell(
-            onTap: () => Modular.to.navigate('./page2'),
+            onTap: () {
+              Modular.to.navigate('./page2');
+            },
             child: Container(
               height: 100,
               width: double.infinity,

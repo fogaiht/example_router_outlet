@@ -12,6 +12,14 @@ class RoutesIntroPage extends StatefulWidget {
 
 class _RoutesIntroPageState extends State<RoutesIntroPage> {
   @override
+  void initState() {
+    Modular.to.addListener(() {
+      setState(() {});
+    });
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('RoutesIntro Page')),

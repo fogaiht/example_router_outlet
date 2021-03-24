@@ -1,8 +1,8 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_triple/flutter_triple.dart';
 
-class HomeStore extends NotifierStore<Exception, int> {
-  HomeStore() : super(0);
+class HomeController extends NotifierStore<Exception, int> {
+  HomeController() : super(0);
 
   Future<void> increment() async {
     setLoading(true);
