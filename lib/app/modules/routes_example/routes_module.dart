@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 import 'pages/route_page_1.dart';
@@ -15,6 +16,15 @@ class RoutesModule extends Module {
       '/',
       child: (_, __) => RoutesIntroPage(),
       children: [
+        WildcardRoute(
+          child: (_, __) => Scaffold(
+            body: Container(
+              color: Colors.red,
+              height: 200,
+              width: 200,
+            ),
+          ),
+        ),
         ChildRoute('/page1', child: (_, __) => RoutePage1()),
         ChildRoute('/page2', child: (_, __) => RoutePage2()),
         ChildRoute('/page3', child: (_, __) => RoutePage3()),
